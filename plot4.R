@@ -87,8 +87,7 @@ legend(
     'topright',
     c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'),
     col = c('black', 'red', 'blue'),
-    lwd = 1,
-    bty = 'n'
+    lwd = 1
 )
 
 # Build the Bottom-Right graph
