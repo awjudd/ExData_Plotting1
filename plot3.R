@@ -34,7 +34,7 @@ with(
     lines(
         Time,
         Sub_metering_1,
-        col = 'red'
+        col = 'black'
     )
 )
 

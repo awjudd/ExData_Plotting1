@@ -49,7 +49,8 @@ with(
         Sub_metering_1,
         type = 'n',
         xlab = '',
-        ylab = 'Energy sub metering'
+        ylab = 'Energy sub metering',
+        col = 'black'
     )
 )
 
@@ -59,7 +60,7 @@ with(
     lines(
         Time,
         Sub_metering_1,
-        col = 'red'
+        col = 'black'
     )
 )
 
