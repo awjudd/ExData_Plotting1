@@ -1,8 +1,11 @@
-# Retrieve the source data
-#  This command will return a 'data' variable which we will contain the data set for each of the
-#  graphs.
-source('retrieve-data.R')
+# Check if we have the data in memory already
+if(!exists('data'))
+{
+    # We don't, so retrieve it from the source file
+    source('retrieve-data.R')   
+}
 
+# Set up the environment to write the contents to a "png" file
 png(
     filename = 'plot1.png',
     width = 480,
@@ -23,5 +26,5 @@ with(
      )
  )
 
-# Copy the graph to the current directory
+# Close off our connection to the output file
 dev.off()

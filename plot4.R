@@ -1,8 +1,11 @@
-# Retrieve the source data
-#  This command will return a 'data' variable which we will contain the data set for each of the
-#  graphs.
-#source('retrieve-data.R')
+# Check if we have the data in memory already
+if(!exists('data'))
+{
+    # We don't, so retrieve it from the source file
+    source('retrieve-data.R')   
+}
 
+# Set up the environment to write the contents to a "png" file
 png(
     filename = 'plot4.png',
     width = 480,
@@ -11,6 +14,7 @@ png(
     bg = 'transparent'
 )
 
+# Set the graph up in the 2 x 2 matrix
 par(mfrow = c(2, 2))
 
 # Build the Top-Left graph (same as "plot2")
@@ -78,12 +82,13 @@ with(
     )
 )
 
+# Add in the legend with no border
 legend(
     'topright',
     c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'),
     col = c('black', 'red', 'blue'),
     lwd = 1,
-    box.lwd = 0
+    bty = 'n'
 )
 
 # Build the Bottom-Right graph
@@ -97,5 +102,5 @@ with(
     )
 )
 
-# Copy the graph to the current directory
+# Close off our connection to the output file
 dev.off()

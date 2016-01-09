@@ -1,9 +1,13 @@
 # Used in order to retrieve and rip through the data file
 # that is required for the project.
 
-# Url: https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip
+# Where we will download the data from
 sourceUrl <- 'https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip'
+
+# The zip file that we will download the data to
 zipFileName <- 'exdata-data-household_power_consumption.zip'
+
+# The text file that will be extracted from the zip file
 sourceFileName <- 'household_power_consumption.txt'
 
 # Do we already the text file?
